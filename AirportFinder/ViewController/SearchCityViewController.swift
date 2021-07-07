@@ -87,7 +87,7 @@ extension SearchCityViewController: UITableViewDelegate, UITableViewDataSource {
 //-----------------------------------------------------------------------
 // MARK:- Search and Textfield delegate
 //-----------------------------------------------------------------------
-extension SearchCityViewController {
+extension SearchCityViewController: UITextFieldDelegate {
     
     @objc private func textFieldDidChange(_ textField: UITextField) {
      // filter tableViewData with textField.text
