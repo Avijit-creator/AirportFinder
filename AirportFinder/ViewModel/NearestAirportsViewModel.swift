@@ -43,7 +43,10 @@ extension NearestAirportsViewModel {
         let currentLong = selectedCity.lon?.toDouble() ?? 0.0
         let myLocation = CLLocation(latitude:currentLat, longitude: currentLong)
         
-        return airportsArray.filter({  $0.type == "Airports"  }).sorted(by: { $0.distance(to: myLocation) < $1.distance(to: myLocation) })
+    return airportsArray.filter({  $0.country == selectedCity.country  }).sorted(by: { $0.distance(to: myLocation) < $1.distance(to: myLocation) })
+
+    
+    
     }
 
 }

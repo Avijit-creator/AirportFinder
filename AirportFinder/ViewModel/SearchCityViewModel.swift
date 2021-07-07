@@ -68,3 +68,16 @@ extension SearchCityViewModel {
 
       }
 }
+
+
+//-----------------------------------------------------------------------
+// MARK:- Filter Only Airports
+//-----------------------------------------------------------------------
+extension SearchCityViewModel {
+    
+    public func filterAiportData( inputArr: [AirportModel]) -> [AirportModel] {
+        let filteredArr = inputArr.filter({ $0.type == "Airports" })
+        return filteredArr
+    }
+    
+}

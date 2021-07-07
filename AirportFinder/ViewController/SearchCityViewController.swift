@@ -78,7 +78,7 @@ extension SearchCityViewController: UITableViewDelegate, UITableViewDataSource {
         
         let story = UIStoryboard(name: "Main", bundle: nil)
         let nearestViewcontroller = story.instantiateViewController(identifier:"NearestAirportsViewController") as! NearestAirportsViewController
-        nearestViewcontroller.viewModel = NearestAirportsViewModel(selectedCityModel: self.viewModel.searchResultArr[indexPath.row], airportArray: self.viewModel.arrayListJson)
+        nearestViewcontroller.viewModel = NearestAirportsViewModel(selectedCityModel: self.viewModel.searchResultArr[indexPath.row], airportArray: self.viewModel.filterAiportData(inputArr: self.viewModel.arrayListJson))
         self.navigationController?.pushViewController(nearestViewcontroller, animated:true)
         
     }
